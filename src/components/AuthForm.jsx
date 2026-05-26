@@ -1,6 +1,9 @@
 import {
-  View, Text, TextInput, TouchableOpacity,
-  ActivityIndicator
+  ActivityIndicator,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import { authStyles as styles } from "../styles/authStyles";
 
@@ -18,11 +21,9 @@ export default function AuthForm({
 }) {
   return (
     <View>
-      {/* Header */}
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.subtitle}>{subtitle}</Text>
 
-      {/* Fields */}
       {fields.map((field) => (
         <View key={field.key} style={styles.inputGroup}>
           <Text style={styles.label}>{field.label}</Text>
@@ -43,19 +44,18 @@ export default function AuthForm({
         </View>
       ))}
 
-      {/* Submit Button */}
       <TouchableOpacity
         style={[styles.button, loading && styles.buttonDisabled]}
         onPress={onSubmit}
         disabled={loading}
       >
-        {loading
-          ? <ActivityIndicator color="#fff" />
-          : <Text style={styles.buttonText}>{submitLabel}</Text>
-        }
+        {loading ? (
+          <ActivityIndicator color="#fff" />
+        ) : (
+          <Text style={styles.buttonText}>{submitLabel}</Text>
+        )}
       </TouchableOpacity>
 
-      {/* Footer (link navigasi) */}
       {footer && footer}
     </View>
   );

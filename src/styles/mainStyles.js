@@ -3,7 +3,7 @@ import { colors } from "./colors";
 
 
 export const mainStyles = StyleSheet.create({
-  // Layout
+  
   container: {
     flex: 1,
     backgroundColor: colors.background,
@@ -20,7 +20,7 @@ export const mainStyles = StyleSheet.create({
     backgroundColor: colors.background,
   },
 
-  // Common Text
+  
   screenTitle: {
     fontSize: 24,
     fontWeight: "bold",
@@ -34,7 +34,7 @@ export const mainStyles = StyleSheet.create({
 
 
 
-  // Form Elements
+  
   inputGroup: {
     marginBottom: 20,
   },
@@ -61,7 +61,7 @@ export const mainStyles = StyleSheet.create({
     marginTop: 4,
   },
 
-  // Buttons
+ 
   primaryBtn: {
     backgroundColor: colors.primary,
     borderRadius: 12,
@@ -88,7 +88,7 @@ export const mainStyles = StyleSheet.create({
     fontSize: 14,
   },
 
-  // Cards
+  
   card: {
     backgroundColor: colors.surface,
     borderRadius: 16,
@@ -107,17 +107,14 @@ export const mainStyles = StyleSheet.create({
   },
 });
 
-// ============================================================
-// ADD NOTE / ADD PASSWORD STYLES
-// ============================================================
 export const addNoteStyles = StyleSheet.create({
-  // Header
+
   header: { marginBottom: 28 },
 
-  // Text Area
+
   textArea: { minHeight: 80, textAlignVertical: "top" },
 
-  // Password Input Row
+
   passwordRow: { flexDirection: "row", alignItems: "center" },
   passwordInput: { flex: 1, borderTopRightRadius: 0, borderBottomRightRadius: 0 },
   showBtn: {
@@ -131,12 +128,12 @@ export const addNoteStyles = StyleSheet.create({
   },
   showBtnText: { fontSize: 18 },
 
-  // Strength Indicator
+
   strengthRow: { flexDirection: "row", alignItems: "center", marginTop: 8, gap: 8 },
   strengthBar: { height: 4, width: 60, borderRadius: 2 },
   strengthLabel: { fontSize: 12, fontWeight: "600" },
 
-  // Generator Card
+
   generatorCard: {
     backgroundColor: colors.surface,
     borderRadius: 16,
@@ -167,7 +164,7 @@ export const addNoteStyles = StyleSheet.create({
   },
   toggleLabel: { color: colors.textSecondary, fontSize: 14 },
 
-  // Buttons (exact match dari JSX kamu)
+  
   generateBtn: {
     backgroundColor: colors.primary,
     borderRadius: 10,
@@ -187,11 +184,9 @@ export const addNoteStyles = StyleSheet.create({
   saveBtnText: { color: "#fff", fontWeight: "bold", fontSize: 16 },
 });
 
-// ============================================================
-// VIEW NOTE / VIEW PASSWORD STYLES
-// ============================================================
+
 export const viewNoteStyles = StyleSheet.create({
-  // Header
+
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -202,7 +197,7 @@ export const viewNoteStyles = StyleSheet.create({
     fontSize: 15,
   },
 
-  // Icon
+
   iconContainer: {
     alignItems: "center",
     marginBottom: 32,
@@ -227,7 +222,7 @@ export const viewNoteStyles = StyleSheet.create({
     marginTop: 4,
   },
 
-  // Password Display
+
   passwordRow: {
     flexDirection: "row",
     alignItems: "center",
@@ -250,7 +245,7 @@ export const viewNoteStyles = StyleSheet.create({
     marginBottom: 16,
   },
 
-  // Copy Button
+
   copyBtn: {
     backgroundColor: colors.primary,
     borderRadius: 10,
@@ -266,14 +261,14 @@ export const viewNoteStyles = StyleSheet.create({
     fontSize: 14,
   },
 
-  // Notes / Details
+
   notesText: {
     color: colors.textSecondary,
     fontSize: 15,
     lineHeight: 22,
   },
 
-  // Meta Info
+
   metaCard: {
     backgroundColor: colors.surface,
     borderRadius: 16,
@@ -296,11 +291,8 @@ export const viewNoteStyles = StyleSheet.create({
   },
 });
 
-// ============================================================
-// DASHBOARD STYLES
-// ============================================================
 export const dashboardStyles = StyleSheet.create({
-  // Layout
+
   container: {
     flex: 1,
     backgroundColor: colors.background,
@@ -308,7 +300,7 @@ export const dashboardStyles = StyleSheet.create({
     paddingTop: 60,
   },
 
-  // Header
+
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -347,7 +339,7 @@ export const dashboardStyles = StyleSheet.create({
 
   
 
-  // Stats
+
   statsCard: {
     backgroundColor: colors.primary,
     borderRadius: 16,
@@ -366,7 +358,7 @@ export const dashboardStyles = StyleSheet.create({
     marginTop: 4,
   },
 
-  // List
+
   sectionTitle: {
     fontSize: 16,
     fontWeight: "600",
@@ -418,7 +410,7 @@ export const dashboardStyles = StyleSheet.create({
     fontSize: 16,
   },
 
-  // Empty State
+
   emptyContainer: {
     alignItems: "center",
     paddingTop: 60,
@@ -438,7 +430,7 @@ export const dashboardStyles = StyleSheet.create({
     marginTop: 4,
   },
 
-  // FAB
+ 
   fab: {
     position: "absolute",
     bottom: 32,

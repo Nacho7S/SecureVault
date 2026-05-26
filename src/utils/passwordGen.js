@@ -25,20 +25,18 @@ export const generatePassword = ({
     required.push(randomChar(SYMBOLS));
   }
 
-  // Isi sisa panjang password dengan karakter acak dari charset
+
   const remaining = Array.from(
     { length: length - required.length },
     () => randomChar(charset)
   );
 
-  // Shuffle agar karakter wajib tidak selalu di posisi yang sama
+
   const combined = [...required, ...remaining];
   return shuffleArray(combined).join("");
 };
 
-// ============================================================
-// CEK KEKUATAN PASSWORD - untuk feedback ke user
-// ============================================================
+
 export const checkPasswordStrength = (password) => {
   let score = 0;
   if (password.length >= 12) score++;
@@ -52,7 +50,7 @@ export const checkPasswordStrength = (password) => {
   return { label: "Kuat", color: "#22c55e" };
 };
 
-// ---- Helper functions ----
+
 const randomChar = (str) =>
   str[Math.floor(Math.random() * str.length)];
 

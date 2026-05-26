@@ -4,7 +4,7 @@ import { colors } from "./colors";
 
 
 export const authStyles = StyleSheet.create({
-  // Layout
+  
   container: {
     flex: 1,
     backgroundColor: colors.background,
@@ -20,7 +20,7 @@ export const authStyles = StyleSheet.create({
     paddingTop: 80,
   },
 
-  // Header
+
   title: {
     fontSize: 28,
     fontWeight: "bold",
@@ -33,7 +33,7 @@ export const authStyles = StyleSheet.create({
     marginBottom: 40,
   },
 
-  // Form
+
   inputGroup: {
     marginBottom: 20,
   },
@@ -60,7 +60,7 @@ export const authStyles = StyleSheet.create({
     marginTop: 4,
   },
 
-  // Button
+
   button: {
     backgroundColor: colors.primary,
     borderRadius: 12,
@@ -78,7 +78,7 @@ export const authStyles = StyleSheet.create({
     fontSize: 16,
   },
 
-  // Link
+
   linkText: {
     color: colors.textSecondary,
     textAlign: "center",

@@ -1,12 +1,7 @@
 import { Alert } from "react-native";
 import NetInfo from "@react-native-community/netinfo";
 
-// ============================================================
-// WIFI RISK WARNING
-// Materi Pertemuan 7: WiFi Security
-// Mendeteksi koneksi WiFi dan memberi peringatan risiko
-// Berdasarkan ancaman: MITM, Rogue AP, Packet Sniffing
-// ============================================================
+
 export const checkNetworkSecurity = async () => {
   try {
     const state = await NetInfo.fetch();
@@ -33,12 +28,12 @@ export const checkNetworkSecurity = async () => {
       );
     }
   } catch (e) {
-    // Silent fail — tidak mengganggu flow aplikasi
+
     console.log("Network check error:", e);
   }
 };
 
-// Untuk keperluan laporan — deskripsi ancaman WiFi
+
 export const WIFI_THREATS = [
   {
     name: "MITM (Man-in-the-Middle)",

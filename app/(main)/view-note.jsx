@@ -94,7 +94,6 @@ export default function ViewNoteScreen() {
 
   return (
     <ScrollView style={mainStyles.container} contentContainerStyle={mainStyles.content}>
-      {/* Header */}
       <View style={viewNoteStyles.header}>
         <TouchableOpacity onPress={() => router.back()}>
           <Text style={mainStyles.backBtn}>← Kembali</Text>
@@ -103,8 +102,6 @@ export default function ViewNoteScreen() {
           <Text style={viewNoteStyles.deleteText}>🗑️ Hapus</Text>
         </TouchableOpacity>
       </View>
-
-      {/* Icon & Title */}
       <View style={viewNoteStyles.iconContainer}>
         <View style={viewNoteStyles.icon}>
           <Text style={viewNoteStyles.iconText}>
@@ -117,7 +114,6 @@ export default function ViewNoteScreen() {
         ) : null}
       </View>
 
-      {/* Password Card */}
       <View style={mainStyles.card}>
         <Text style={mainStyles.cardLabel}>Password</Text>
 
@@ -147,7 +143,6 @@ export default function ViewNoteScreen() {
         </TouchableOpacity>
       </View>
 
-      {/* Notes */}
       {note.notes ? (
         <View style={mainStyles.card}>
           <Text style={mainStyles.cardLabel}>Catatan</Text>
@@ -155,7 +150,6 @@ export default function ViewNoteScreen() {
         </View>
       ) : null}
 
-      {/* Metadata */}
       <View style={viewNoteStyles.metaCard}>
         <View style={viewNoteStyles.metaRow}>
           <Text style={viewNoteStyles.metaLabel}>Dibuat</Text>

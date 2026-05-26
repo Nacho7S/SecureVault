@@ -80,7 +80,7 @@ export default function AddNoteScreen() {
 
   return (
     <ScrollView style={mainStyles.container} contentContainerStyle={mainStyles.content}>
-      {/* Header */}
+    
       <View style={addNoteStyles.header}>
         <TouchableOpacity onPress={() => router.back()}>
           <Text style={mainStyles.backBtn}>← Kembali</Text>
@@ -88,7 +88,7 @@ export default function AddNoteScreen() {
         <Text style={mainStyles.screenTitle}>Tambah Password</Text>
       </View>
 
-      {/* Judul */}
+   
       <View style={mainStyles.inputGroup}>
         <Text style={mainStyles.label}>Judul *</Text>
         <TextInput
@@ -101,7 +101,7 @@ export default function AddNoteScreen() {
         {errors.title && <Text style={mainStyles.errorText}>{errors.title}</Text>}
       </View>
 
-      {/* Website */}
+     
       <View style={mainStyles.inputGroup}>
         <Text style={mainStyles.label}>Website / Nama Aplikasi</Text>
         <TextInput
@@ -114,7 +114,7 @@ export default function AddNoteScreen() {
         />
       </View>
 
-      {/* Generator Card */}
+   
       <View style={addNoteStyles.generatorCard}>
         <Text style={addNoteStyles.generatorTitle}>⚙️ Generator Password</Text>
 
@@ -156,7 +156,7 @@ export default function AddNoteScreen() {
         </TouchableOpacity>
       </View>
 
-      {/* Password Input */}
+     
       <View style={mainStyles.inputGroup}>
         <Text style={mainStyles.label}>Password *</Text>
         <View style={addNoteStyles.passwordRow}>
@@ -192,7 +192,7 @@ export default function AddNoteScreen() {
         {errors.password && <Text style={mainStyles.errorText}>{errors.password}</Text>}
       </View>
 
-      {/* Notes */}
+    
       <View style={mainStyles.inputGroup}>
         <Text style={mainStyles.label}>Catatan (opsional)</Text>
         <TextInput
@@ -206,7 +206,7 @@ export default function AddNoteScreen() {
         />
       </View>
 
-      {/* Save Button */}
+    
       <TouchableOpacity
         style={[addNoteStyles.saveBtn, loading && addNoteStyles.saveBtnDisabled]}
         onPress={handleSave}

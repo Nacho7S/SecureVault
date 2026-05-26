@@ -123,7 +123,7 @@ export default function DashboardScreen() {
 
   return (
     <View style={dashboardStyles.container}>
-      {/* Header */}
+  
       <View style={dashboardStyles.header}>
         <View>
           <Text style={dashboardStyles.greeting}>
@@ -140,8 +140,6 @@ export default function DashboardScreen() {
           <Text style={dashboardStyles.logoutText}>Logout</Text>
         </TouchableOpacity>
 
-        {/* debug button dinyalakan untuk keperluan UTS */}
-
         <TouchableOpacity
           style={dashboardStyles.debugBtn}
           onPress={() => router.push("/(main)/debug")}
@@ -152,13 +150,13 @@ export default function DashboardScreen() {
         
       </View>
 
-      {/* Stats */}
+  
       <View style={dashboardStyles.statsCard}>
         <Text style={dashboardStyles.statsNumber}>{notes.length}</Text>
         <Text style={dashboardStyles.statsLabel}>Password tersimpan</Text>
       </View>
 
-      {/* List Notes */}
+  
       <Text style={dashboardStyles.sectionTitle}>Password Tersimpan</Text>
 
       <FlatList
@@ -180,7 +178,7 @@ export default function DashboardScreen() {
         showsVerticalScrollIndicator={false}
       />
 
-      {/* FAB */}
+
       <TouchableOpacity
         style={dashboardStyles.fab}
         onPress={() => router.push("/(main)/add-note")}

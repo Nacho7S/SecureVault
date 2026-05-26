@@ -16,7 +16,7 @@ export default function DebugScreen() {
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState("users");
 
-  // Caesar demo state
+ 
   const [caesarInput, setCaesarInput] = useState("PASSWORD");
   const [caesarShift, setCaesarShift] = useState(3);
   const [showBruteForce, setShowBruteForce] = useState(false);
@@ -68,7 +68,7 @@ export default function DebugScreen() {
 
   return (
     <View style={styles.container}>
-      {/* Header */}
+
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()}>
           <Text style={styles.backBtn}>← Kembali</Text>
@@ -82,7 +82,6 @@ export default function DebugScreen() {
         </TouchableOpacity>
       </View>
 
-      {/* Warning Banner */}
       <View style={styles.warningBanner}>
         <Text style={styles.warningText}>
           ⚠️ Halaman ini hanya untuk keperluan dokumentasi & pengujian UTS.
@@ -90,7 +89,7 @@ export default function DebugScreen() {
         </Text>
       </View>
 
-      {/* Tabs - scrollable */}
+
       <ScrollView horizontal showsHorizontalScrollIndicator={false}
         style={styles.tabsScroll} contentContainerStyle={styles.tabs}>
         {TABS.map((tab) => (
@@ -108,7 +107,6 @@ export default function DebugScreen() {
 
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
 
-        {/* ============ TAB USERS ============ */}
         {activeTab === "users" && (
           <View>
             <Text style={styles.sectionDesc}>
@@ -153,7 +151,6 @@ export default function DebugScreen() {
           </View>
         )}
 
-        {/* ============ TAB NOTES ============ */}
         {activeTab === "notes" && (
           <View>
             <Text style={styles.sectionDesc}>
@@ -193,7 +190,6 @@ export default function DebugScreen() {
           </View>
         )}
 
-        {/* ============ TAB SESSION ============ */}
         {activeTab === "session" && (
           <View>
             <Text style={styles.sectionDesc}>
@@ -240,7 +236,6 @@ export default function DebugScreen() {
           </View>
         )}
 
-        {/* ============ TAB KRIPTO ============ */}
         {activeTab === "kripto" && (
           <View>
             <Text style={styles.sectionDesc}>
@@ -248,7 +243,6 @@ export default function DebugScreen() {
               Berkaitan dengan materi Pertemuan 2 & 3.
             </Text>
 
-            {/* Caesar Cipher Demo */}
             <View style={styles.card}>
               <View style={styles.cardHeader}>
                 <Text style={styles.cardTitle}>🏛️ Caesar Cipher (Shift Cipher)</Text>
@@ -332,7 +326,6 @@ export default function DebugScreen() {
               )}
             </View>
 
-            {/* AES-256 Comparison */}
             <View style={styles.card}>
               <View style={styles.cardHeader}>
                 <Text style={styles.cardTitle}>🔐 AES-256 (SecureVault)</Text>
@@ -353,7 +346,6 @@ export default function DebugScreen() {
           </View>
         )}
 
-        {/* ============ TAB WIFI ============ */}
         {activeTab === "wifi" && (
           <View>
             <Text style={styles.sectionDesc}>
@@ -373,7 +365,6 @@ export default function DebugScreen() {
                 <Row label="Tool yang digunakan" value={threat.tool} valueStyle={styles.yellowText} />
                 <Row label="Mitigasi" value={threat.mitigation} valueStyle={styles.greenText} />
 
-                {/* Relevansi ke SecureVault */}
                 <View style={[styles.comparisonBox, { marginTop: 8 }]}>
                   <Text style={styles.comparisonTitle}>🛡️ Perlindungan di SecureVault</Text>
                   {threat.name.includes("MITM") && (
@@ -404,7 +395,6 @@ export default function DebugScreen() {
               </View>
             ))}
 
-            {/* Protocol Security */}
             <View style={styles.card}>
               <View style={styles.cardHeader}>
                 <Text style={styles.cardTitle}>🔒 Protokol Keamanan WiFi</Text>
@@ -434,7 +424,6 @@ export default function DebugScreen() {
   );
 }
 
-// ---- Helper Components ----
 function Row({ label, value, valueStyle, mono }) {
   return (
     <View style={styles.row}>
@@ -506,7 +495,7 @@ const styles = StyleSheet.create({
   decryptedBox: { borderColor: "#14532d" },
   decryptedText: { fontFamily: "monospace", fontSize: 12, color: "#22c55e", fontWeight: "600" },
 
-  // Caesar demo
+
   label: { color: "#94a3b8", fontSize: 13, marginBottom: 8, marginTop: 12 },
   debugInput: { backgroundColor: "#0f172a", color: "#f1f5f9", borderRadius: 10, padding: 12, fontSize: 15, borderWidth: 1, borderColor: "#334155", fontFamily: "monospace", marginBottom: 4 },
   formulaText: { fontFamily: "monospace", fontSize: 13, color: "#a5b4fc", marginBottom: 4, textAlign: "center" },
@@ -528,14 +517,14 @@ const styles = StyleSheet.create({
   bruteForceResult: { color: "#94a3b8", fontSize: 11, fontFamily: "monospace", flex: 1 },
   bruteForceMatch: { color: "#22c55e", fontSize: 11, fontWeight: "bold" },
 
-  // CompareRow
+
   compareRow: { backgroundColor: "#1e293b", borderRadius: 8, padding: 10, marginBottom: 6 },
   compareLabel: { color: "#94a3b8", fontSize: 12, marginBottom: 6, fontWeight: "600" },
   compareValues: { gap: 4 },
   compareBad: { color: "#ef4444", fontSize: 11 },
   compareGood: { color: "#22c55e", fontSize: 11 },
 
-  // WiFi
+
   protocolRow: { flexDirection: "row", alignItems: "flex-start", marginBottom: 12, gap: 12, paddingBottom: 12, borderBottomWidth: 1, borderBottomColor: "#0f172a" },
   protocolName: { color: "#f1f5f9", fontWeight: "bold", fontSize: 13, width: 60 },
   protocolDesc: { color: "#64748b", fontSize: 11, marginTop: 2 },
