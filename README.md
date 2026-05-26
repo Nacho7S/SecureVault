@@ -70,7 +70,7 @@ SecureVault/
 
 ```bash
 # 1. Clone repository
-git clone <repo-url>
+https://github.com/Nacho7S/SecureVault.git
 cd SecureVault
 
 # 2. Install dependencies
